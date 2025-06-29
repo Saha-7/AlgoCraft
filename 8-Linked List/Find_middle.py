@@ -31,7 +31,7 @@ def printMiddle(head):
 
 
 
-   ## Efficient Approach ## 
+   ## Efficient Approach (Slow-Fast Pointer) ## 
 
     if head==None:
         return
