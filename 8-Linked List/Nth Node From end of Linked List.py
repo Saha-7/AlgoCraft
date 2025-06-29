@@ -39,7 +39,19 @@ def printList(head):
 def printNthFromEnd(head,n):
     if head==None:
         return
-    slow=
+    
+    slow =head
+    fast=head
+
+    for i in range(n):
+        if fast==None:
+            return
+        fast=fast.next
+    
+    while fast!=None:
+        slow=slow.next
+        fast=fast.next
+    print(slow.data)
 
 
 
