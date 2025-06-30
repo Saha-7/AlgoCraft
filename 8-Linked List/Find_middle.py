@@ -30,7 +30,6 @@ def printMiddle(head):
     # print(curr.data)
 
 
-
    ## Efficient Approach (Slow-Fast Pointer) ## 
 
     if head==None:
