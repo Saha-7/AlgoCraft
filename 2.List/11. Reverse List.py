@@ -1,11 +1,11 @@
-l= [1,34,43,55]
+l= [1,34,43,56,87,99,55]
 
 
 def Reverse(arr):
     left=0
     right=len(arr)-1
 
-    if left<right:
+    while left<right:
         arr[left], arr[right] = arr[right], arr[left]
         left+=1
         right-=1
