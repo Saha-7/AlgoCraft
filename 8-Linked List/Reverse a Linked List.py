@@ -37,7 +37,7 @@ def reverseList(head):
         cur=nextNode
     return prev
 
-       
+      
 
 def printList(head):
     curr = head
