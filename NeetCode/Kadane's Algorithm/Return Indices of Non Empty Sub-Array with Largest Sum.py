@@ -11,4 +11,12 @@ def kadane(arr):
 
         if curSum<0:
             curSum = 0
-            
+            L=R
+
+        curSum+=arr[R]
+        if curSum>maxSum:
+            maxSum = curSum
+            maxL, maxR = L, R
+    return [maxL, maxR]
+    
+print(kadane(l))
