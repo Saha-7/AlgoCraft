@@ -1,3 +1,8 @@
+class Demo:
+    pass
+
+d1=Demo()
+
 class Employee:
     '''This class is for maintaining Employee data'''
     def __init__(self,name,age):
@@ -5,16 +10,11 @@ class Employee:
         self.age=age
         
 
-
 e1 = Employee('Pritam', 25)
 e2 = Employee('Rahul', 23)
 
 
-print(Employee.__dict__)
 
-print(Employee.__doc__)
+print(isinstance(e1,Employee))
 
-print(Employee.__name__)
-
-print(Employee.__module__)
-
+print(isinstance(d1,Employee))
