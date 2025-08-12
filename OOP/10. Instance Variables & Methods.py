@@ -10,6 +10,7 @@ e2 = Employee('Rahul', 23)
 
 #Instance variables
 e1.name="Pritam Saha"
+e1.add = "Ranaghat"
 
 print(e1.__dict__)
 
@@ -23,7 +24,7 @@ class Student:
 
     def change_data(self):
         self.name="Pritam Saha"
-        self.marks = 80
+        del self.age
 
 
 s1=Student("",25)
