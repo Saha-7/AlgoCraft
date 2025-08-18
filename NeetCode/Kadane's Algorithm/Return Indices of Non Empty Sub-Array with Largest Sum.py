@@ -1,6 +1,5 @@
 l=[4,-1,2,-7,4,3]
 
-
 def kadane(arr):
     maxSum = arr[0]
     curSum = 0
