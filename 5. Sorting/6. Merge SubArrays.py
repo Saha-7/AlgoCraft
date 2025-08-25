@@ -1,31 +1,32 @@
-def merge(a, low, mid, high):
-    left=a[low:mid+1]
-    right=a[mid+1:high+1]
+# Merge in-place
+def merge(arr, s, m, e):
+    # Copy the sorted left & right halfs to temp arrays
+    L = arr[s: m + 1]
+    R = arr[m + 1: e + 1]
 
-    m=len(left)
-    n=len(right)
-    i=j=0 
-    k=low
+    i = 0 # index for L
+    j = 0 # index for R
+    k = s # index for arr
 
-    while k<m and k<n:
-        if left[i]<right[j]:
-            a[k]=left[i]
-            i+=1
-            k+=1
+    # Merge the two sorted halfs into the original array
+    while i < len(L) and j < len(R):
+        if L[i] <= R[j]:
+            arr[k] = L[i]
+            i += 1
         else:
-            a[k]=right[j]
-            j+=1
-            k+=1
-    
-    while i<m:
-        a[k]=left[i]
-        i+=1
-        k+=1
+            arr[k] = R[j]
+            j += 1
+        k += 1
 
-    while j<n:
-        a[k]=right[j]
-        j+=1
-        k+=1
+    # One of the halfs will have elements remaining
+    while i < len(L):
+        arr[k] = L[i]
+        i += 1
+        k += 1
+    while j < len(R):
+        arr[k] = R[j]
+        j += 1
+        k += 1
 
     
 
