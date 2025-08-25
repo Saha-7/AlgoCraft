@@ -1,3 +1,22 @@
+# Implementation of MergeSort
+def mergeSort(arr, s, e):
+    if e - s + 1 <= 1:
+        return arr
+
+    # The middle index of the array
+    m = (s + e) // 2
+
+    # Sort the left half
+    mergeSort(arr, s, m)
+
+    # Sort the right half
+    mergeSort(arr, m + 1, e)
+
+    # Merge sorted halfs
+    merge(arr, s, m, e)
+    
+    return arr
+
 # Merge in-place
 def merge(arr, s, m, e):
     # Copy the sorted left & right halfs to temp arrays
@@ -27,12 +46,13 @@ def merge(arr, s, m, e):
         arr[k] = R[j]
         j += 1
         k += 1
-
     
 
 
-a = [10, 15, 20, 40, 8, 11, 55]
+arr = [0, 15, 20, 40, 8, 11, 55, 24, 45, 100]
 
-merge(a, 0, 3, 6)
+s=0
+e=len(arr)-1
 
-print(a)
+ans=mergeSort(arr, s, e)
+print(ans)
