@@ -28,7 +28,7 @@ print(d)
 print("-------------------------------------------------------")
 
 # Looping through the dictionary
-for key in d:
+for key in d.keys():
     value = d[key]
     print(key)
     print(value)
@@ -36,5 +36,16 @@ for key in d:
 
 
 # Checking if a key exists in the dictionary
-# if 'Orange' in d:
-#     print(d['Orange'])
+if 'Orange' in d:
+    print(d['Orange'])
+
+
+# Getting the number of entries in the dictionary
+print(len(d))
+
+
+# looping through key in the dictionary
+for key in d:
+    value = d[key]
+    print(key)
+    print(value)
