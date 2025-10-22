@@ -38,7 +38,7 @@ def printMiddle(head):
     slow=head
     fast=head
 
-    while fast!=None and fast.next!=None:
+    while fast and fast.next:
         fast=fast.next.next
         slow=slow.next
 
@@ -51,8 +51,8 @@ def printMiddle(head):
         
 
 head = Node(10)
-head.next = Node(10)
-head.next.next = Node(20)
+head.next = Node(15)
+# head.next.next = Node(20)
 
 
 printList(head)
